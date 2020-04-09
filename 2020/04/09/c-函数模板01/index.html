@@ -16,7 +16,7 @@
 <meta property="og:description" content="函数模版前言自从二月份学校开始网课之后我发现除了c++之外我基本上就没怎么认真上过课(“▔□▔)，虽然c++的课上的还算比较认真，但是却出现了学完一章就容易忘记原来学习过的内容，所以决心将每一次上课的c++作业都加上注释传到博客，一来是方便复习，二来又可以锻炼自己的打字速度，老夫真是个天才人才ฅ(๑˙o˙๑)ฅ。 1.函数模版定义这到底是个啥函数模板可以用来描述一个与数据类型无关的函数（算法），避">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-09T08:19:13.000Z">
-<meta property="article:modified_time" content="2020-04-09T11:36:19.105Z">
+<meta property="article:modified_time" content="2020-04-09T11:42:58.782Z">
 <meta property="article:author" content="Leon Lee">
 <meta property="article:tag" content="学习心得">
 <meta name="twitter:card" content="summary">
@@ -146,7 +146,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ 请看下面嗷</span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename T&gt; T Max(T a, T b)   //其中的T表示的是函数类型可以为int double等函数类型</span><br><span class="line">//定义函数模版的声明方式就是上面这个</span><br><span class="line">//template &lt;模板形参表&gt; 函数类型 函数名(函数形参表)</span><br><span class="line">&#123;</span><br><span class="line"> <span class="built_in">return</span> a&gt;b?a:b;		//输出两个数中较大的 </span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> int m=10, n=20;</span><br><span class="line"> double x=12.56, y=3.5;</span><br><span class="line"> char a=<span class="string">'z'</span>, b=<span class="string">'w'</span>;</span><br><span class="line"> cout&lt;&lt;Max(m, n)&lt;&lt;endl;// 生成模板函数int Max(int a, int b)</span><br><span class="line"> cout&lt;&lt;Max(x, y)&lt;&lt;endl; // 生成模板函数double Max(double a, double b)</span><br><span class="line"> cout&lt;&lt;Max(a, b)&lt;&lt;endl; // 生成模板函数char Max(char a, char b)</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如上仅仅定义了一个template就可以求出整形，浮点，字符串类型相比的的较大值，着实比函数重载节省空间嗷。</p>
 <h3 id="需要注意什么鸭"><a href="#需要注意什么鸭" class="headerlink" title="需要注意什么鸭"></a>需要注意什么鸭</h3><p>函数模板的实例化是在函数调用时由编译器来完成的。当编译器遇<br>到一个函数调用时，如果仅存在函数模板，便会根据实参表中实参<br>的类型和已定义的函数模板生成一个模板函数，该模板函数的函数<br>体与函数模板的函数体相同，而形参表中的类型则以实参表中的实<br>际类型为依据。<br><strong>简单点就是使用函数模板就可以很方便的计算相同过程但是函数类型不同的数据啦</strong><br><strong>虽然使用了函数模板，但是和重载函数编译出来的结果是相同的嗷，写法更简洁，编译出来的程序大小是相同的嗷</strong></p>
-<h2 id="2-程序实例"><a href="#2-程序实例" class="headerlink" title="2.程序实例"></a>2.程序实例</h2><h3 id="编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。"><a href="#编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。" class="headerlink" title="编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。"></a>编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ </span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename Type&gt; int FindElement(Type a[], Type x, int n) </span><br><span class="line">// 定义函数模板，函数类型暂定为Type，将随着传入的参数的不同进行修改</span><br><span class="line">&#123;</span><br><span class="line"> <span class="keyword">for</span>(int i=0; i&lt;n; i++) //此处是一个循环，用于调出数组内的所有数进行比对</span><br><span class="line"> <span class="keyword">if</span>(a[i]==x) <span class="built_in">return</span> i ;</span><br><span class="line"> <span class="built_in">return</span> -1;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> int a[6]=&#123;1, 3, -2, -9, 2,100&#125;;</span><br><span class="line"> double b[6]=&#123;30, 75.8, 68.3, 76.5, 93.5, 26.7&#125;;</span><br><span class="line"> char c[10]=&#123;<span class="string">'a'</span>, <span class="string">'v'</span>, <span class="string">'s'</span>, <span class="string">'k'</span>, <span class="string">'x'</span>, <span class="string">'w'</span>, <span class="string">'d'</span>, <span class="string">';'</span>, <span class="string">'k'</span>, <span class="string">'0'</span>&#125;;</span><br><span class="line"> cout&lt;&lt;<span class="string">"100在数组a中的下标为："</span>&lt;&lt;FindElement (a, 100, 6)&lt;&lt;endl;</span><br><span class="line"> cout&lt;&lt;<span class="string">"76.6在数组b中的下标为："</span></span><br><span class="line"> &lt;&lt; FindElement (b, 76.6, 6)&lt;&lt;endl;</span><br><span class="line"> cout&lt;&lt;<span class="string">"k在数组c中的下标为："</span>&lt;&lt;FindElement (c, <span class="string">'k'</span>, 10)&lt;&lt;endl;</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-程序实例"><a href="#2-程序实例" class="headerlink" title="2.程序实例"></a>2.程序实例</h2><p><strong>编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ </span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename Type&gt; int FindElement(Type a[], Type x, int n) </span><br><span class="line">// 定义函数模板，函数类型暂定为Type，将随着传入的参数的不同进行修改</span><br><span class="line">&#123;</span><br><span class="line"> <span class="keyword">for</span>(int i=0; i&lt;n; i++) //此处是一个循环，用于调出数组内的所有数进行比对</span><br><span class="line"> <span class="keyword">if</span>(a[i]==x) <span class="built_in">return</span> i ;</span><br><span class="line"> <span class="built_in">return</span> -1;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> int a[6]=&#123;1, 3, -2, -9, 2,100&#125;;</span><br><span class="line"> double b[6]=&#123;30, 75.8, 68.3, 76.5, 93.5, 26.7&#125;;</span><br><span class="line"> char c[10]=&#123;<span class="string">'a'</span>, <span class="string">'v'</span>, <span class="string">'s'</span>, <span class="string">'k'</span>, <span class="string">'x'</span>, <span class="string">'w'</span>, <span class="string">'d'</span>, <span class="string">';'</span>, <span class="string">'k'</span>, <span class="string">'0'</span>&#125;;</span><br><span class="line"> cout&lt;&lt;<span class="string">"100在数组a中的下标为："</span>&lt;&lt;FindElement (a, 100, 6)&lt;&lt;endl;</span><br><span class="line"> cout&lt;&lt;<span class="string">"76.6在数组b中的下标为："</span></span><br><span class="line"> &lt;&lt; FindElement (b, 76.6, 6)&lt;&lt;endl;</span><br><span class="line"> cout&lt;&lt;<span class="string">"k在数组c中的下标为："</span>&lt;&lt;FindElement (c, <span class="string">'k'</span>, 10)&lt;&lt;endl;</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -154,7 +155,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2020年04月09日 19:36</p>
+        <p>最后更新： 2020年04月09日 19:42</p>
         <p>原始链接： <a class="post-url" href="/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/" title="c++函数模板01">http://yoursite.com/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -272,12 +273,22 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#函数模版"><span class="post-toc-text">函数模版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-函数模版定义"><span class="post-toc-text">1.函数模版定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#这到底是个啥"><span class="post-toc-text">这到底是个啥</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何去使用鸭"><span class="post-toc-text">如何去使用鸭</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#需要注意什么鸭"><span class="post-toc-text">需要注意什么鸭</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-程序实例"><span class="post-toc-text">2.程序实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。"><span class="post-toc-text">编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最后"><span class="post-toc-text">最后</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#函数模版"><span class="post-toc-text">函数模版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-函数模版定义"><span class="post-toc-text">1.函数模版定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#这到底是个啥"><span class="post-toc-text">这到底是个啥</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何去使用鸭"><span class="post-toc-text">如何去使用鸭</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#需要注意什么鸭"><span class="post-toc-text">需要注意什么鸭</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-程序实例"><span class="post-toc-text">2.程序实例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最后"><span class="post-toc-text">最后</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
+  
+    <a href="/2020/04/09/markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          markdown的学习笔记
+        
+      </span>
+    </a>
   
   
     <a href="/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -346,7 +357,7 @@
             
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -379,7 +390,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a>
         </div>
     </div>
 </div>
