@@ -15,11 +15,17 @@
 <meta property="og:site_name" content="Leon&#39;s blog">
 <meta property="og:description" content="前言其实早就对github有所耳闻（据说是全球最大的同性交友网站？&#x2F;手动狗头），每每听大佬们说在上面找到各种答案爬虫，秒刷网课啥的，还是挺羡（柠）慕（檬）的。因为疫情在家也挺无聊的，因此萌生了建立个人网站的念头，发现云服务器挺贵，域名每年还要续费（留下了贫穷的眼泪），刚好买了过气的树莓派，在csdn上学习树莓派的时候·找到了署博客的方法（嘿嘿）。第一次使用折腾了一个晚上，总结了一些经验的说，就打算">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/20/JQI7rt.th.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/20/JQIqVf.th.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/20/JQI6Dx.th.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/20/JQopMn.th.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/20/JQI48H.th.jpg">
 <meta property="article:published_time" content="2020-04-02T03:45:27.000Z">
-<meta property="article:modified_time" content="2020-04-09T11:39:51.462Z">
+<meta property="article:modified_time" content="2020-04-20T07:55:55.716Z">
 <meta property="article:author" content="Leon Lee">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/20/JQI7rt.th.jpg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -141,7 +147,10 @@
       
             
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其实早就对github有所耳闻（据说是全球最大的同性交友网站？/手动狗头），每每听大佬们说在上面找到各种答案爬虫，秒刷网课啥的，还是挺羡（柠）慕（檬）的。<br>因为疫情在家也挺无聊的，因此萌生了建立个人网站的念头，发现云服务器挺贵，域名每年还要续费（留下了贫穷的眼泪），刚好买了过气的树莓派，在csdn上学习树莓派的时候·找到了署博客的方法（嘿嘿）。<br>第一次使用折腾了一个晚上，总结了一些经验的说，就打算写一条新的博客（这个家伙主要是怕他自己忘了怎么重来），部署到github（顺便看一手老罗的相声）。</p>
-<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="安装hexo之前所需要做的准备"><a href="#安装hexo之前所需要做的准备" class="headerlink" title="安装hexo之前所需要做的准备"></a>安装hexo之前所需要做的准备</h3><p>node.js和git（有的教程也没用到git，到现在我也还不知道git的作用，（大概可能过会儿我就知道惹））<br>node.js可以在<a href="http://www.nodejs.org" target="_blank" rel="noopener">www.nodejs.org</a> 上下载，mac os和win可以直接下载，建议下载LTS版本（长支持版），会更加稳定。*1<br>下载完成直接可以一路确认安装下去嗷。<br>安装完成后win可以在cmd中输入一下代码</p>
+<p><a href="https://imgchr.com/i/JQI7rt" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/04/20/JQI7rt.th.jpg" alt="JQI7rt.th.jpg"></a></p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="安装hexo之前所需要做的准备"><a href="#安装hexo之前所需要做的准备" class="headerlink" title="安装hexo之前所需要做的准备"></a>安装hexo之前所需要做的准备</h3><p>node.js和git（有的教程也没用到git，到现在我也还不知道git的作用，（大概可能过会儿我就知道惹））<br>node.js可以在<a href="http://www.nodejs.org" target="_blank" rel="noopener">www.nodejs.org</a> 上下载，mac os和win可以直接下载，建议下载LTS版本（长支持版），会更加稳定。*1</p>
+<p>下载完成直接可以一路确认安装下去嗷。<br><a href="https://imgchr.com/i/JQIqVf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/04/20/JQIqVf.th.jpg" alt="JQIqVf.th.jpg"></a></p>
+<p>安装完成后win可以在cmd中输入一下代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v          <span class="comment">#查看nodejs版本</span></span><br></pre></td></tr></table></figure>
 
 <p>我是分割线—</p>
@@ -161,7 +170,7 @@
 <p>次处安装失败了可以重复使用命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v                  <span class="comment">#查看hexo的版本</span></span><br></pre></td></tr></table></figure>
 
-<p>有显示的话就说明安装成功了</p>
+<p>有显示的话就说明安装成功了<br><a href="https://imgchr.com/i/JQI6Dx" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/04/20/JQI6Dx.th.jpg" alt="JQI6Dx.th.jpg"></a></p>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="正式开始使用hexo创建个人博客"><a href="#正式开始使用hexo创建个人博客" class="headerlink" title="正式开始使用hexo创建个人博客"></a>正式开始使用hexo创建个人博客</h3><p>现在开始创建本地文件夹</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir bolg        <span class="comment">#创建名字为blog的文件夹</span></span><br></pre></td></tr></table></figure>
 
@@ -181,15 +190,16 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s               <span class="comment">#启动本地博客服务</span></span><br></pre></td></tr></table></figure>
 
 <p>接下来就可以在浏览器中输入本地服务端口网址测试自己的静态博客啦<br>预览成功后就可以进入下一步啦</p>
+<p><a href="https://imgchr.com/i/JQopMn" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/04/20/JQopMn.th.jpg" alt="JQopMn.th.jpg"></a></p>
 <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="将博客推到远端github或者gitee"><a href="#将博客推到远端github或者gitee" class="headerlink" title="将博客推到远端github或者gitee"></a>将博客推到远端github或者gitee</h3><p>在浏览器中打开github或者gitee的官网进行注册，这里以github为例（其实gitee速度更快些）</p>
-<h2 id="最终章"><a href="#最终章" class="headerlink" title="最终章"></a>最终章</h2><h3 id><a href="#" class="headerlink" title></a></h3><p>今天晚上偶然发现bilibili上的一个up讲的超级好！！！也包含了主题的替换，如果大家有时间可以去看看,本章到此结束（这货实在是太懒了，晚上忙着打游戏去了，我都看不下去了）</p>
+<h2 id="最终章"><a href="#最终章" class="headerlink" title="最终章"></a>最终章</h2><h3 id><a href="#" class="headerlink" title></a></h3><p>今天晚上偶然发现bilibili上的一个up讲的超级好！！！也包含了主题的替换，如果大家有时间可以去看看,本章到此结束（这货实在是太懒了，晚上忙着打游戏去了，我都看不下去了）<br><a href="https://imgchr.com/i/JQI48H" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/04/20/JQI48H.th.jpg" alt="JQI48H.th.jpg"></a></p>
 <p>up:<a href="https://b23.tv/BV1Yb411a7ty" target="_blank" rel="noopener">codesheep</a><br>2020-4-2 19：46：23</p>
 <hr>
 <h3 id="文章的最后"><a href="#文章的最后" class="headerlink" title="文章的最后"></a>文章的最后</h3><p>*1：本次文章没有图文（昨晚弄了一晚上也还没学会，害，下次加上）。<br>*2：罗老师的直播挺拖沓的，现在时间对现在的年龄段的罗友们的极为宝贵，罗老师对一般的路人吸引力也不够，希望老罗可以学习一下吧，流量和热度这样拖下去，估计也没什么人看。<br>*3：markdown的排版啥的我还没学会，可能文章的排版有些问题，大家多多谅解（虽然也没什么人看）</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2020年04月09日 19:39</p>
+        <p>最后更新： 2020年04月20日 15:55</p>
         <p>原始链接： <a class="post-url" href="/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" title="第一次博客">http://yoursite.com/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -386,7 +396,7 @@
             
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -419,7 +429,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 10px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a>
         </div>
     </div>
 </div>
