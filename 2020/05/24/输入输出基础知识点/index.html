@@ -16,7 +16,7 @@
 <meta property="og:description" content="前言这是个我自己期末复习的复习专栏，目的是为了能在各种设备上方便的阅读，接下来是正文： 标准输入输出流之间的使用方法和区别标准输出流1.1put()函数:Put()函数可以将一个字符型的变量或者一个字符常量输出到屏幕上,使用方法如下 12345678910#include&lt;iosteream&gt;using namespace std;Int main()&amp;#123;		char ch&#x3D;’">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-24T09:09:51.000Z">
-<meta property="article:modified_time" content="2020-05-24T09:33:15.122Z">
+<meta property="article:modified_time" content="2020-05-25T01:18:17.497Z">
 <meta property="article:author" content="Leon Lee">
 <meta property="article:tag" content="学习心得">
 <meta property="article:tag" content="Hide">
@@ -147,7 +147,7 @@
       
             
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是个我自己期末复习的复习专栏，目的是为了能在各种设备上方便的阅读，接下来是正文：</p>
-<h2 id="标准输入输出流之间的使用方法和区别"><a href="#标准输入输出流之间的使用方法和区别" class="headerlink" title="标准输入输出流之间的使用方法和区别"></a>标准输入输出流之间的使用方法和区别</h2><h3 id="标准输出流"><a href="#标准输出流" class="headerlink" title="标准输出流"></a>标准输出流</h3><h4 id="1-1put-函数"><a href="#1-1put-函数" class="headerlink" title="1.1put()函数:"></a>1.1put()函数:</h4><p>Put()函数可以将一个字符型的变量或者一个字符常量输出到屏幕上,使用方法如下</p>
+<h3 id="标准输入输出流之间的使用方法和区别"><a href="#标准输入输出流之间的使用方法和区别" class="headerlink" title="标准输入输出流之间的使用方法和区别"></a>标准输入输出流之间的使用方法和区别</h3><h3 id="标准输出流"><a href="#标准输出流" class="headerlink" title="标准输出流"></a>标准输出流</h3><h4 id="1-1put-函数"><a href="#1-1put-函数" class="headerlink" title="1.1put()函数:"></a>1.1put()函数:</h4><p>Put()函数可以将一个字符型的变量或者一个字符常量输出到屏幕上,使用方法如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iosteream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">Int main()</span><br><span class="line">&#123;</span><br><span class="line">		char ch=’a’;</span><br><span class="line">cout.put(ch)&lt;&lt;endl;			//输出这个名为ch的字符内的字符</span><br><span class="line">cout.put(‘b’).put(‘c’)&lt;&lt;endl;		//输出b,c,这两个字符</span><br><span class="line">system(“pause”);</span><br><span class="line"><span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -185,10 +185,10 @@
 <p><strong><em>先向二进制文件中写入整型数据1~10，再将10个数从文件读出并输出到屏幕上。</em></strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;fstream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> // 写方式打开二进制文件file.dat</span><br><span class="line"> fstream outfile(<span class="string">"file.dat"</span>, ios::binary|ios::out); </span><br><span class="line"> <span class="keyword">if</span> (!outfile.is_open()) // 判断文件打开操作是否成功</span><br><span class="line"> &#123;</span><br><span class="line"> cout&lt;&lt;<span class="string">"以写方式打开二进制文件file.dat失败！"</span>&lt;&lt;endl; </span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line"> &#125;</span><br><span class="line"> int a=1;</span><br><span class="line"> <span class="keyword">for</span> (a=1; a&lt;=10; a++) //循环将10个数字输出到文件file.dat中</span><br><span class="line"> outfile.write((char*)&amp;a, sizeof(a)); // 将变量a写入文件中</span><br><span class="line"> outfile.close(); //关闭文件</span><br><span class="line"> fstream infile(<span class="string">"file.dat"</span>, ios::binary|ios::<span class="keyword">in</span>); // 以读方式打开</span><br><span class="line"> <span class="keyword">if</span> (!infile.is_open()) // 判断文件打开操作是否成功</span><br><span class="line"> &#123;</span><br><span class="line">    cerr&lt;&lt;<span class="string">"以读方式打开二进制文件file.dat失败！"</span>&lt;&lt;endl;</span><br><span class="line">     <span class="built_in">return</span> 0;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">while</span> (infile.read((char*)&amp;a, sizeof(a))) //循环读取整型数据到变量a</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">' '</span>;</span><br><span class="line"> infile.close(); // 关闭文件</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2020年05月24日 17:33</p>
+        <p>最后更新： 2020年05月25日 09:18</p>
         <p>原始链接： <a class="post-url" href="/2020/05/24/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" title="输入输出基础知识点">http://yoursite.com/2020/05/24/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -277,12 +277,22 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标准输入输出流之间的使用方法和区别"><span class="post-toc-text">标准输入输出流之间的使用方法和区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标准输出流"><span class="post-toc-text">标准输出流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1put-函数"><span class="post-toc-text">1.1put()函数:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2write-函数"><span class="post-toc-text">1.2write()函数:</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标准输入流"><span class="post-toc-text">标准输入流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1get-函数"><span class="post-toc-text">2.1get()函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2getline-函数"><span class="post-toc-text">2.2getline()函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3read-函数"><span class="post-toc-text">2.3read()函数</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-text">前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标准输入输出流之间的使用方法和区别"><span class="post-toc-text">标准输入输出流之间的使用方法和区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标准输出流"><span class="post-toc-text">标准输出流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1put-函数"><span class="post-toc-text">1.1put()函数:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2write-函数"><span class="post-toc-text">1.2write()函数:</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标准输入流"><span class="post-toc-text">标准输入流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1get-函数"><span class="post-toc-text">2.1get()函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2getline-函数"><span class="post-toc-text">2.2getline()函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3read-函数"><span class="post-toc-text">2.3read()函数</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
+  
+    <a href="/2020/05/25/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%BF%90%E8%A1%8C%E5%AE%9E%E4%BE%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          输入输出运行实例
+        
+      </span>
+    </a>
   
   
     <a href="/2020/05/17/%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -351,7 +361,7 @@
             
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 10px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 13.33px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 16.67px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 13.33px;">游记</a>
+            <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 10px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 17.5px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 15px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 17.5px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 12.5px;">游记</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -390,7 +400,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 10px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 13.33px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 16.67px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 13.33px;">游记</a>
+            <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 10px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 17.5px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 15px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 17.5px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 12.5px;">游记</a>
         </div>
     </div>
 </div>
