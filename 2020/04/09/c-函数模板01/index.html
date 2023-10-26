@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>c++函数模板01 | Leon&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="函数模版前言自从二月份学校开始网课之后我发现除了c++之外我基本上就没怎么认真上过课(“▔□▔)，虽然c++的课上的还算比较认真，但是却出现了学完一章就容易忘记原来学习过的内容，所以决心将每一次上课的c++作业都加上注释传到博客，一来是方便复习，二来又可以锻炼自己的打字速度，老夫真是个天才人才ฅ(๑˙o˙๑)ฅ。 1.函数模版定义这到底是个啥函数模板可以用来描述一个与数据类型无关的函数（算法），避">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++函数模板01">
+<meta property="og:url" content="https://leonlee233.github.io/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/index.html">
+<meta property="og:site_name" content="Leon&#39;s blog">
+<meta property="og:description" content="函数模版前言自从二月份学校开始网课之后我发现除了c++之外我基本上就没怎么认真上过课(“▔□▔)，虽然c++的课上的还算比较认真，但是却出现了学完一章就容易忘记原来学习过的内容，所以决心将每一次上课的c++作业都加上注释传到博客，一来是方便复习，二来又可以锻炼自己的打字速度，老夫真是个天才人才ฅ(๑˙o˙๑)ฅ。 1.函数模版定义这到底是个啥函数模板可以用来描述一个与数据类型无关的函数（算法），避">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-04-09T08:19:13.000Z">
+<meta property="article:modified_time" content="2020-04-20T07:56:00.291Z">
+<meta property="article:author" content="Leon Lee">
+<meta property="article:tag" content="学习心得">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Leon's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Leon&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://leonlee233.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-c-函数模板01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/" class="article-date">
+  <time class="dt-published" datetime="2020-04-09T08:19:13.000Z" itemprop="datePublished">2020-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      c++函数模板01
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="函数模版"><a href="#函数模版" class="headerlink" title="函数模版"></a>函数模版</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自从二月份学校开始网课之后我发现除了c++之外我基本上就没怎么认真上过课(“▔□▔)，虽然c++的课上的还算比较认真，但是却出现了学完一章就容易忘记原来学习过的内容，所以决心将每一次上课的c++作业都加上注释传到博客，一来是方便复习，二来又可以锻炼自己的打字速度，老夫真是个<del>天才</del>人才ฅ(๑˙o˙๑)ฅ。</p>
+<h2 id="1-函数模版定义"><a href="#1-函数模版定义" class="headerlink" title="1.函数模版定义"></a>1.函数模版定义</h2><h3 id="这到底是个啥"><a href="#这到底是个啥" class="headerlink" title="这到底是个啥"></a>这到底是个啥</h3><p>函数模板可以用来描述一个与数据类型无关的函数（算法），避免重载<br>函数时函数体的重复设计。函数模板可以对不同类型的数据进行相同的处理，<br>其作用与函数重载类似，但代码要简单得多。<br><strong>其实就是用于不同数据类型但是有着相同的处理过程的函数的定义</strong><br><strong>譬如要进行整形，浮点数分别之间的运算，使用函数模型就能够使得编写的函数更加简洁</strong></p>
+<h3 id="如何去使用鸭"><a href="#如何去使用鸭" class="headerlink" title="如何去使用鸭"></a>如何去使用鸭</h3><p>接下来给出一个cpp源代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ 请看下面嗷</span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename T&gt; T Max(T a, T b)   //其中的T表示的是函数类型可以为int double等函数类型</span><br><span class="line">//定义函数模版的声明方式就是上面这个</span><br><span class="line">//template &lt;模板形参表&gt; 函数类型 函数名(函数形参表)</span><br><span class="line">&#123;</span><br><span class="line"> <span class="built_in">return</span> a&gt;b?a:b;		//输出两个数中较大的 </span><br><span class="line">&#125;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int m=10, n=20;</span><br><span class="line"> double x=12.56, y=3.5;</span><br><span class="line"> char a=<span class="string">&#x27;z&#x27;</span>, b=<span class="string">&#x27;w&#x27;</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">Max(m, n)&lt;&lt;endl;// 生成模板函数int Max</span>(int a, int b)</span><br><span class="line"> cout&lt;&lt;<span class="string">Max(x, y)&lt;&lt;endl; // 生成模板函数double Max</span>(double a, double b)</span><br><span class="line"> cout&lt;&lt;<span class="string">Max(a, b)&lt;&lt;endl; // 生成模板函数char Max</span>(char a, char b)</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上仅仅定义了一个template就可以求出整形，浮点，字符串类型相比的的较大值，着实比函数重载节省空间嗷。</p>
+<h3 id="需要注意什么鸭"><a href="#需要注意什么鸭" class="headerlink" title="需要注意什么鸭"></a>需要注意什么鸭</h3><p>函数模板的实例化是在函数调用时由编译器来完成的。当编译器遇<br>到一个函数调用时，如果仅存在函数模板，便会根据实参表中实参<br>的类型和已定义的函数模板生成一个模板函数，该模板函数的函数<br>体与函数模板的函数体相同，而形参表中的类型则以实参表中的实<br>际类型为依据。<br><strong>简单点就是使用函数模板就可以很方便的计算相同过程但是函数类型不同的数据啦</strong><br><strong>虽然使用了函数模板，但是和重载函数编译出来的结果是相同的嗷，写法更简洁，编译出来的程序大小是相同的嗷</strong></p>
+<h2 id="2-程序实例"><a href="#2-程序实例" class="headerlink" title="2.程序实例"></a>2.程序实例</h2><p><strong>编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ </span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename Type&gt; int FindElement(Type a[], Type x, int n) </span><br><span class="line">// 定义函数模板，函数类型暂定为Type，将随着传入的参数的不同进行修改</span><br><span class="line">&#123;</span><br><span class="line"> <span class="keyword">for</span>(int i=0; i&lt;n; i++) //此处是一个循环，用于调出数组内的所有数进行比对</span><br><span class="line"> <span class="keyword">if</span>(a[i]==x) <span class="built_in">return</span> i ;</span><br><span class="line"> <span class="built_in">return</span> -1;</span><br><span class="line">&#125;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int a[6]=&#123;1, 3, -2, -9, 2,100&#125;;</span><br><span class="line"> double b[6]=&#123;30, 75.8, 68.3, 76.5, 93.5, 26.7&#125;;</span><br><span class="line"> char c[10]=&#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;;&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;0&#x27;</span>&#125;;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;100在数组a中的下标为：&quot;</span>&lt;&lt;<span class="string">FindElement (a, 100, 6)&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;76.6在数组b中的下标为：&quot;</span></span><br><span class="line"><span class="string"> &lt;&lt; FindElement</span> (b, 76.6, 6)&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;k在数组c中的下标为：&quot;&lt;&lt;FindElement (c, &#x27;k&#x27;, 10)&lt;&lt;endl</span>;</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>课暂时还只上了一丢丢，学完一课一更新吧，嘿嘿</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://leonlee233.github.io/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/" data-id="clo6q30bh0003z8ukc8e1h1gv" data-title="c++函数模板01" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/09/markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          markdown的学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">第一次博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hide/" rel="tag">Hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" rel="tag">回忆录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E5%9B%BE/" rel="tag">美图</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 12px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 18px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 16px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 12px;">游记</a> <a href="/tags/%E7%BE%8E%E5%9B%BE/" style="font-size: 10px;">美图</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/14/%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E5%BC%80%E5%A7%8B/">一个好的开始</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/20/linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/">linux系统的安装</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/20/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80step1-hadoop/">大数据基础step1:hadoop</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/05/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Linux学习笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Leon Lee<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

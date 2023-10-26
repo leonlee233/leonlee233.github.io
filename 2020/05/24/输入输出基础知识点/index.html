@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>输入输出基础知识点 | Leon&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前言这是个我自己期末复习的复习专栏，目的是为了能在各种设备上方便的阅读，接下来是正文： 标准输入输出流之间的使用方法和区别标准输出流1.1put()函数:Put()函数可以将一个字符型的变量或者一个字符常量输出到屏幕上,使用方法如下 12345678910#include&lt;iosteream&gt;using namespace std;Int main()&amp;#123;		char ch&#x3D;’">
+<meta property="og:type" content="article">
+<meta property="og:title" content="输入输出基础知识点">
+<meta property="og:url" content="https://leonlee233.github.io/2020/05/24/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+<meta property="og:site_name" content="Leon&#39;s blog">
+<meta property="og:description" content="前言这是个我自己期末复习的复习专栏，目的是为了能在各种设备上方便的阅读，接下来是正文： 标准输入输出流之间的使用方法和区别标准输出流1.1put()函数:Put()函数可以将一个字符型的变量或者一个字符常量输出到屏幕上,使用方法如下 12345678910#include&lt;iosteream&gt;using namespace std;Int main()&amp;#123;		char ch&#x3D;’">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-05-24T09:09:51.000Z">
+<meta property="article:modified_time" content="2020-05-25T01:18:17.497Z">
+<meta property="article:author" content="Leon Lee">
+<meta property="article:tag" content="学习心得">
+<meta property="article:tag" content="Hide">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Leon's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Leon&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://leonlee233.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-输入输出基础知识点" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/05/24/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
+  <time class="dt-published" datetime="2020-05-24T09:09:51.000Z" itemprop="datePublished">2020-05-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      输入输出基础知识点
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是个我自己期末复习的复习专栏，目的是为了能在各种设备上方便的阅读，接下来是正文：</p>
+<h3 id="标准输入输出流之间的使用方法和区别"><a href="#标准输入输出流之间的使用方法和区别" class="headerlink" title="标准输入输出流之间的使用方法和区别"></a>标准输入输出流之间的使用方法和区别</h3><h3 id="标准输出流"><a href="#标准输出流" class="headerlink" title="标准输出流"></a>标准输出流</h3><h4 id="1-1put-函数"><a href="#1-1put-函数" class="headerlink" title="1.1put()函数:"></a>1.1put()函数:</h4><p>Put()函数可以将一个字符型的变量或者一个字符常量输出到屏幕上,使用方法如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iosteream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">Int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">		char ch=’a’;</span><br><span class="line">cout.put(ch)&lt;&lt;<span class="string">endl;			//输出这个名为ch的字符内的字符</span></span><br><span class="line"><span class="string">cout.put(‘b’).put(‘c’)&lt;&lt;endl</span>;		//输出b,c,这两个字符</span><br><span class="line">system(“pause”);</span><br><span class="line"><span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="1-2write-函数"><a href="#1-2write-函数" class="headerlink" title="1.2write()函数:"></a>1.2write()函数:</h4><p><strong>Write()函数可以将一个字符串的部分或者全部字符送到输出流,函数的使用方法如下</strong><br>其调用格式为：<br><strong>out.write(字符型指针, 字节数n)</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iosteream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">Int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">	char* ch=”i am so cool ohhhhh”;		//为这个字符指针指向的内存地址进行赋值</span><br><span class="line">    cout.write(ch,8)&lt;&lt;<span class="string">endl;				//输出这个字符地址指向的一串字符的前8个</span></span><br><span class="line"><span class="string">    cout.write(ch,strlen(ch))&lt;&lt;endl</span>;		//计算这个字符地址指向的内存中的字符大小并全部输出</span><br><span class="line">    system(“pause”);</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Write()的二进制使用方法如下</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;fstream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int a=12345;</span><br><span class="line"> fstream outascii(<span class="string">&quot;file.txt&quot;</span>, ios::out); // 以文本方式打开文件</span><br><span class="line"> fstream outbin(<span class="string">&quot;file.dat&quot;</span>, ios::binary|ios::out);// 二进制方式打开文件</span><br><span class="line"> outascii&lt;&lt;<span class="string">a; // 用“&lt;&lt;”将变量a</span>输出到文本文件中</span><br><span class="line"> // 用write()函数将变量a输出到二进制文件中</span><br><span class="line"> outbin.write((char*)&amp;a, sizeof(a)); 		//(char*)&amp;a意为将a强制转换成为char*类型</span><br><span class="line"> outbin.close();</span><br><span class="line"> outascii.close();</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="标准输入流"><a href="#标准输入流" class="headerlink" title="标准输入流"></a>标准输入流</h3><h4 id="2-1get-函数"><a href="#2-1get-函数" class="headerlink" title="2.1get()函数"></a>2.1get()函数</h4><p><strong>get()可以从输入设备中读取单个字符，使用方法如下</strong></p>
+<p><em><strong>无参get()函数输入：</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">Int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">		int n=0;</span><br><span class="line">char ch;</span><br><span class="line">cout&lt;&lt;”请输入多个字符（按回车结束）”&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string">while((ch=cin.get())!=’\n’)</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">cout&lt;&lt;ch;</span></span><br><span class="line"><span class="string">n++;</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">cout&lt;&lt;endl</span>;</span><br><span class="line">cout&lt;&lt;”输入字符个数为：”&lt;&lt;<span class="string">n&lt;&lt;endl;</span></span><br><span class="line"><span class="string">return 0;</span></span><br><span class="line"><span class="string">｝</span></span><br></pre></td></tr></table></figure>
+
+<p>***使用无参get()函数进行文件输入： ***</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;fstream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int n=0;</span><br><span class="line"> char ch;</span><br><span class="line"> fstream outfile(<span class="string">&quot;file.txt&quot;</span>, ios::out); // 以写方式打开文件</span><br><span class="line"> outfile&lt;&lt;<span class="string">&quot;Microsoft\nVisual\nC++&quot;</span>; // 向文件中写入三行数据</span><br><span class="line"> outfile.close(); // 关闭文件</span><br><span class="line"> fstream infile(<span class="string">&quot;file.txt&quot;</span>, ios::<span class="keyword">in</span>); // 以读方式打开文件</span><br><span class="line"> // 若遇到文件结束符EOF，则表示文件中的数据读取完毕，循环结束</span><br><span class="line"> <span class="keyword">while</span> ((ch=infile.get())!=EOF)</span><br><span class="line"> &#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">ch;</span></span><br><span class="line"><span class="string">     n++;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;文件中的字符个数为：&quot;&lt;&lt;n&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> infile.close(); // 关闭文件</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><em><strong>使用带参get()函数进行标准输入：</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int n=0;</span><br><span class="line"> char ch;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;请输入多个字符（按回车结束）：&quot;</span>&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string"> while (1)</span></span><br><span class="line"><span class="string"> &#123;</span></span><br><span class="line"><span class="string">    cin.get(ch);</span></span><br><span class="line"><span class="string">    if (ch == &#x27;\n&#x27;) // 若遇到回车符，则循环结束</span></span><br><span class="line"><span class="string">    break;</span></span><br><span class="line"><span class="string">    cout&lt;&lt;ch;</span></span><br><span class="line"><span class="string">    n++;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;endl</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;输入字符个数为：&quot;</span>&lt;&lt;<span class="string">n&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><em><strong>使用带参get()函数进行文件输入：</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;fstream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int n=0;</span><br><span class="line"> char ch;</span><br><span class="line"> fstream outfile(<span class="string">&quot;file.txt&quot;</span>, ios::out); // 以写方式打开文件</span><br><span class="line"> outfile&lt;&lt;<span class="string">&quot;Microsoft\nVisual\nC++&quot;</span>; // 向文件中写入三行数据</span><br><span class="line"> outfile.close(); // 关闭文件</span><br><span class="line"> fstream infile(<span class="string">&quot;file.txt&quot;</span>, ios::<span class="keyword">in</span>); // 以读方式打开文件</span><br><span class="line"> // 若遇到文件结束符EOF，则cin.get(ch)返回假，循环结束</span><br><span class="line"> <span class="keyword">while</span> (infile.get(ch)) </span><br><span class="line"> &#123;</span><br><span class="line">     cout&lt;&lt;<span class="string">ch;</span></span><br><span class="line"><span class="string">    n++;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;文件中的字符个数为：&quot;&lt;&lt;n&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> infile.close(); // 关闭文件</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-2getline-函数"><a href="#2-2getline-函数" class="headerlink" title="2.2getline()函数"></a>2.2getline()函数</h4><p><strong>getline()可以函数实现从输入设备读取一个字符串的操作</strong><br><strong>getline()有3个参数，输入流对象调用getline()的格式为：</strong><br><strong>in.getline(字符数组名或字符型指针, 字符个数n, 终止标识符)</strong><br><em><strong>使用方法如下：</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int len, maxlen=0;</span><br><span class="line"> char s[80], t[80];</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;请输入若干个字符串：&quot;</span></span><br><span class="line"> &lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string"> // 输入字符串到数组s，按Ctrl+Z结束循环</span></span><br><span class="line"><span class="string"> while (cin.getline(s,80))</span></span><br><span class="line"><span class="string"> &#123;</span></span><br><span class="line"><span class="string">    len=(int)strlen(s);// 计算当前字符串的长度</span></span><br><span class="line"><span class="string">    // 如果当前字符串长度大于原来最长字符串的长度</span></span><br><span class="line"><span class="string">     if (len&gt;maxlen)</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">        maxlen=len; // 更新maxlen的值</span></span><br><span class="line"><span class="string">         strcpy(t, s); // 将当前字符串拷贝到t中</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;endl</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;长度最大的字符串是：&quot;</span>&lt;&lt;<span class="string">t&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;其长度为：&quot;&lt;&lt;maxlen&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><em><strong>使用getline()函数进行文本文件输入：</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;fstream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int len, maxlen=0;</span><br><span class="line"> char s[80], t[80];</span><br><span class="line"> fstream outfile;</span><br><span class="line"> // 以写方式打开文件</span><br><span class="line"> outfile.open(<span class="string">&quot;file.txt&quot;</span>, ios::out);</span><br><span class="line"> <span class="keyword">if</span> (!outfile.is_open()) // 判断文件打开是否成功</span><br><span class="line"> &#123;</span><br><span class="line"> 	cout&lt;&lt;<span class="string">&quot;以写方式打开file.txt文件失败！&quot;</span>&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string">    return 0;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> // 向文件中写入三行数据</span></span><br><span class="line"><span class="string"> outfile&lt;&lt;&quot;Windows XP&quot;&lt;&lt;endl</span></span><br><span class="line"> &lt;&lt;<span class="string">&quot;Microsoft Visual C++&quot;</span>&lt;&lt;<span class="string">endl</span></span><br><span class="line"><span class="string"> &lt;&lt;&quot;Microsoft Office&quot;&lt;&lt;endl</span>;</span><br><span class="line"> outfile.close(); // 关闭文件</span><br><span class="line"> // 以读方式打开文件</span><br><span class="line"> fstream infile(“file.txt”, ios::<span class="keyword">in</span>);</span><br><span class="line"> <span class="keyword">if</span> (!infile.is_open()) // 判断文件打开是否成功</span><br><span class="line"> &#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;以读方式打开file.txt文件失败！&quot;</span>&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string">    return 0;</span></span><br><span class="line"><span class="string"> &#125; </span></span><br><span class="line"><span class="string"> // 当文件已全部读取完毕时返回假</span></span><br><span class="line"><span class="string"> while (infile.getline(s, sizeof(s))) </span></span><br><span class="line"><span class="string"> &#123;</span></span><br><span class="line"><span class="string"> 	Len=(int)strlen(s);// 计算当前字符串的长度</span></span><br><span class="line"><span class="string"> 	// 如果当前字符串长度大于原来最长字符串</span></span><br><span class="line"><span class="string"> 	// 的长度</span></span><br><span class="line"><span class="string"> 	if (len&gt;maxlen)</span></span><br><span class="line"><span class="string"> 	&#123;</span></span><br><span class="line"><span class="string"> 	    maxlen=len; // 更新maxlen的值</span></span><br><span class="line"><span class="string"> 		strcpy(t, s); // 将当前字符串拷贝到t中</span></span><br><span class="line"><span class="string"> 	&#125;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;长度最大的字符串是：&quot;&lt;&lt;t&lt;&lt;endl</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;其长度为：&quot;</span>&lt;&lt;<span class="string">maxlen&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> infile.close(); // 关闭文件</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3read-函数"><a href="#2-3read-函数" class="headerlink" title="2.3read()函数"></a>2.3read()函数</h4><p><strong>输入流类成员函数read()用于输入多个字节，可以调用这个函数实现从键盘输入指定个数的多个字符的操作。</strong><br><strong>read()函数的调用格式为：in.read(字符型指针, 字符个数n)</strong><br>从输入设备读取n个字符，存入字符型指针所指向的内存空间中。若在读<br>取够n个字符前遇到EOF，则提前结束读取。若读取成功，函数返回值为真（非<br>0）值，若读取失败（遇到文件结束符EOF），函数返回值为假<br><strong>read()函数使用示例如下：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> char s[80];</span><br><span class="line"> int i;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;请输入字符串：&quot;</span>&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string"> cin.read(s, 12); // 从键盘读取前12个字符到数组s中</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;读取的字符是：&quot;;</span></span><br><span class="line"><span class="string"> for (i=0; i&lt;12; i++)</span></span><br><span class="line"><span class="string"> 	cout&lt;&lt;s[i];</span></span><br><span class="line"><span class="string"> cout&lt;&lt;endl</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;读取的字符个数是：&quot;</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">cin.gcount ()&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用read()函数进行二进制文件输入</strong></p>
+<p><strong>read()函数一般与write()函数结合使用进行二进制文件的读&#x2F;写操作：使用write()函数生成二进制文件，使用read()函数读取二进制文件中的数据。</strong></p>
+<p><em><em>read()函数要求第一个参数必须是字符型地址，所以需要用(char</em>)将变量a的地址强制转换成字符型指针。</em>*</p>
+<p><em><strong>先向二进制文件中写入整型数据1~10，再将10个数从文件读出并输出到屏幕上。</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;fstream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> // 写方式打开二进制文件file.dat</span><br><span class="line"> fstream outfile(<span class="string">&quot;file.dat&quot;</span>, ios::binary|ios::out); </span><br><span class="line"> <span class="keyword">if</span> (!outfile.is_open()) // 判断文件打开操作是否成功</span><br><span class="line"> &#123;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;以写方式打开二进制文件file.dat失败！&quot;</span>&lt;&lt;<span class="string">endl; </span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string"> &#125;</span></span><br><span class="line"><span class="string"> int a=1;</span></span><br><span class="line"><span class="string"> for (a=1; a&lt;=10; a++) //循环将10个数字输出到文件file.dat中</span></span><br><span class="line"><span class="string"> outfile.write((char*)&amp;a, sizeof(a)); // 将变量a写入文件中</span></span><br><span class="line"><span class="string"> outfile.close(); //关闭文件</span></span><br><span class="line"><span class="string"> fstream infile(&quot;file.dat&quot;, ios::binary|ios::in); // 以读方式打开</span></span><br><span class="line"><span class="string"> if (!infile.is_open()) // 判断文件打开操作是否成功</span></span><br><span class="line"><span class="string"> &#123;</span></span><br><span class="line"><span class="string">    cerr&lt;&lt;&quot;以读方式打开二进制文件file.dat失败！&quot;&lt;&lt;endl</span>;</span><br><span class="line">     <span class="built_in">return</span> 0;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">while</span> (infile.read((char*)&amp;a, sizeof(a))) //循环读取整型数据到变量a</span><br><span class="line">    cout&lt;&lt;<span class="string">a&lt;&lt;&#x27; &#x27;;</span></span><br><span class="line"><span class="string"> infile.close(); // 关闭文件</span></span><br><span class="line"><span class="string"> return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://leonlee233.github.io/2020/05/24/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" data-id="clo6q30d20012z8uk2k95fiib" data-title="输入输出基础知识点" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hide/" rel="tag">Hide</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/25/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%BF%90%E8%A1%8C%E5%AE%9E%E4%BE%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          输入输出运行实例
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/17/%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">博客的关于页面</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hide/" rel="tag">Hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" rel="tag">回忆录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E5%9B%BE/" rel="tag">美图</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 12px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 18px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 16px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 12px;">游记</a> <a href="/tags/%E7%BE%8E%E5%9B%BE/" style="font-size: 10px;">美图</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/14/%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E5%BC%80%E5%A7%8B/">一个好的开始</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/20/linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/">linux系统的安装</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/20/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80step1-hadoop/">大数据基础step1:hadoop</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/05/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Linux学习笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Leon Lee<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
