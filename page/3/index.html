@@ -13,6 +13,7 @@
 <meta property="og:locale">
 <meta property="article:author" content="Leon Lee">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@https:&#x2F;&#x2F;twitter.com&#x2F;leonwithleo">
   
     <link rel="alternate" href="/atom.xml" title="Leon's blog" type="application/atom+xml">
   
@@ -51,9 +52,9 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/">主页</a>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">归档</a>
         
       </nav>
       <nav id="sub-nav">
@@ -72,78 +73,6 @@
 
       <div class="outer">
         <section id="main">
-  
-    <article id="post-markdown的学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/04/09/markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2020-04-09T11:48:52.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/04/09/markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">markdown的学习笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>开局先bb两句</strong><br>本来一个星期前立下了flag在下个月前要让jing看到我博客上的~~学习资料，本来打算在清明假期好好的学习一手hexo的使用，结果还是控制不住我自己连续在家里躺着玩了三天的王者（辣鸡王者毁我青春败我钱财），今天刚好更新了自己的专业课博客（水），就想着学习一下markdown为了以后能更好的排版，但又实在是害怕自己少儿痴呆的脑子记不住编写的格式，所以顺便就把自己的markdown学习过程也整理一下以免遗忘</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQopMn"><img src="https://s1.ax1x.com/2020/04/20/JQopMn.th.jpg" alt="JQopMn.th.jpg"></a></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>本文章大部分参考<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-paragraph.html">菜鸟教程</a><br>本博客不用于商业用途，如果造成了侵权请联系我删除，感谢菜鸟教程在我成为程序猿的路上对我的支持嗷，本人在此表示感谢</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQIEjI"><img src="https://s1.ax1x.com/2020/04/20/JQIEjI.th.jpg" alt="JQIEjI.th.jpg"></a></p>
-<h2 id="第一章-Markdown-标题"><a href="#第一章-Markdown-标题" class="headerlink" title="第一章 Markdown 标题"></a>第一章 Markdown 标题</h2><h3 id="1、使用-和-标记一级和二级标题"><a href="#1、使用-和-标记一级和二级标题" class="headerlink" title="1、使用 &#x3D; 和 - 标记一级和二级标题"></a>1、使用 &#x3D; 和 - 标记一级和二级标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我展示的是一级标题</span><br><span class="line">=================</span><br><span class="line"></span><br><span class="line">我展示的是二级标题</span><br><span class="line">-----------------</span><br></pre></td></tr></table></figure>
-<p>显示效果请自行复制操作谢谢（狗头保命）</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQITKI"><img src="https://s1.ax1x.com/2020/04/20/JQITKI.th.jpg" alt="JQITKI.th.jpg"></a></p>
-<h3 id="2、使用-号标记"><a href="#2、使用-号标记" class="headerlink" title="2、使用 # 号标记"></a>2、使用 # 号标记</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一级标题</span></span><br><span class="line"><span class="comment">## 二级标题</span></span><br><span class="line"><span class="comment">### 三级标题</span></span><br><span class="line"><span class="comment">#### 四级标题</span></span><br><span class="line"><span class="comment">##### 五级标题</span></span><br><span class="line"><span class="comment">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-<p>显示效果参考本章：<br>例如前言大小为二级标题，参考资料为三级标题</p>
-<h2 id="第二章-Markdown-段落"><a href="#第二章-Markdown-段落" class="headerlink" title="第二章 Markdown 段落"></a>第二章 Markdown 段落</h2><h3 id="1-分段方法"><a href="#1-分段方法" class="headerlink" title="1.分段方法"></a>1.分段方法</h3><p>1.Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。<br>eg:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">你们长的都特别帅  </span><br><span class="line">那当然是不可能的</span><br></pre></td></tr></table></figure>
-<p>2.当然也可以在段落后面使用一个空行来表示重新开始一个段落。<br>eg:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你们长的都特别帅  </span><br><span class="line"></span><br><span class="line">那当然是不可能的</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-更改字体"><a href="#2-更改字体" class="headerlink" title="2.更改字体"></a>2.更改字体</h3><p>例如编写以下字体</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
-<p>让我们看看效果吧：  </p>
-<p><em>斜体文本</em><br><em>斜体文本</em><br><strong>粗体文本</strong><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><em><strong>粗斜体文本</strong></em></p>
-<h3 id="3-1删除线"><a href="#3-1删除线" class="headerlink" title="3.1删除线"></a>3.1删除线</h3><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~~各位看官都比小的帅~~  </span><br><span class="line">大爷我比你们都更加有魅力</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p><del>各位看官都比小的帅</del><br>大爷我比你们都更加有魅力</p>
-<h3 id="3-2下划线"><a href="#3-2下划线" class="headerlink" title="3.2下划线"></a>3.2下划线</h3><p>下划线可以通过 HTML 的 <u> 标签来实现：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p><u>这个博主真TM自恋</u></p>
-<h3 id="3-3脚注"><a href="#3-3脚注" class="headerlink" title="3.3脚注"></a>3.3脚注</h3><p>脚注是对文本的补充说明。</p>
-<p>Markdown 脚注的格式如下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line"></span><br><span class="line">eg：</span><br><span class="line">创建脚注格式类似这样 [^Leon]。</span><br><span class="line"></span><br><span class="line">[^Leon]: 可恶！这个男人竟然浑身散发着人性的光辉和无与伦比的人格魅力</span><br></pre></td></tr></table></figure>
-<p>演示效果如下：<br>创建脚注格式类似这样 <a href="%E5%8F%AF%E6%81%B6%EF%BC%81%E8%BF%99%E4%B8%AA%E7%94%B7%E4%BA%BA%E7%AB%9F%E7%84%B6%E6%B5%91%E8%BA%AB%E6%95%A3%E5%8F%91%E7%9D%80%E4%BA%BA%E6%80%A7%E7%9A%84%E5%85%89%E8%BE%89%E5%92%8C%E6%97%A0%E4%B8%8E%E4%BC%A6%E6%AF%94%E7%9A%84%E4%BA%BA%E6%A0%BC%E9%AD%85%E5%8A%9B">^Leon</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQIrvR"><img src="https://s1.ax1x.com/2020/04/20/JQIrvR.th.jpg" alt="JQIrvR.th.jpg"></a></p>
-<p>ps：剩下的下次更新嗷</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://leonlee233.github.io/2020/04/09/markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clo6q30c1000cz8ukdl5m3opb" data-title="markdown的学习笔记" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
   
     <article id="post-c-函数模板01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -168,22 +97,15 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="函数模版"><a href="#函数模版" class="headerlink" title="函数模版"></a>函数模版</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自从二月份学校开始网课之后我发现除了c++之外我基本上就没怎么认真上过课(“▔□▔)，虽然c++的课上的还算比较认真，但是却出现了学完一章就容易忘记原来学习过的内容，所以决心将每一次上课的c++作业都加上注释传到博客，一来是方便复习，二来又可以锻炼自己的打字速度，老夫真是个<del>天才</del>人才ฅ(๑˙o˙๑)ฅ。</p>
-<h2 id="1-函数模版定义"><a href="#1-函数模版定义" class="headerlink" title="1.函数模版定义"></a>1.函数模版定义</h2><h3 id="这到底是个啥"><a href="#这到底是个啥" class="headerlink" title="这到底是个啥"></a>这到底是个啥</h3><p>函数模板可以用来描述一个与数据类型无关的函数（算法），避免重载<br>函数时函数体的重复设计。函数模板可以对不同类型的数据进行相同的处理，<br>其作用与函数重载类似，但代码要简单得多。<br><strong>其实就是用于不同数据类型但是有着相同的处理过程的函数的定义</strong><br><strong>譬如要进行整形，浮点数分别之间的运算，使用函数模型就能够使得编写的函数更加简洁</strong></p>
-<h3 id="如何去使用鸭"><a href="#如何去使用鸭" class="headerlink" title="如何去使用鸭"></a>如何去使用鸭</h3><p>接下来给出一个cpp源代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ 请看下面嗷</span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename T&gt; T Max(T a, T b)   //其中的T表示的是函数类型可以为int double等函数类型</span><br><span class="line">//定义函数模版的声明方式就是上面这个</span><br><span class="line">//template &lt;模板形参表&gt; 函数类型 函数名(函数形参表)</span><br><span class="line">&#123;</span><br><span class="line"> <span class="built_in">return</span> a&gt;b?a:b;		//输出两个数中较大的 </span><br><span class="line">&#125;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int m=10, n=20;</span><br><span class="line"> double x=12.56, y=3.5;</span><br><span class="line"> char a=<span class="string">&#x27;z&#x27;</span>, b=<span class="string">&#x27;w&#x27;</span>;</span><br><span class="line"> cout&lt;&lt;<span class="string">Max(m, n)&lt;&lt;endl;// 生成模板函数int Max</span>(int a, int b)</span><br><span class="line"> cout&lt;&lt;<span class="string">Max(x, y)&lt;&lt;endl; // 生成模板函数double Max</span>(double a, double b)</span><br><span class="line"> cout&lt;&lt;<span class="string">Max(a, b)&lt;&lt;endl; // 生成模板函数char Max</span>(char a, char b)</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如上仅仅定义了一个template就可以求出整形，浮点，字符串类型相比的的较大值，着实比函数重载节省空间嗷。</p>
-<h3 id="需要注意什么鸭"><a href="#需要注意什么鸭" class="headerlink" title="需要注意什么鸭"></a>需要注意什么鸭</h3><p>函数模板的实例化是在函数调用时由编译器来完成的。当编译器遇<br>到一个函数调用时，如果仅存在函数模板，便会根据实参表中实参<br>的类型和已定义的函数模板生成一个模板函数，该模板函数的函数<br>体与函数模板的函数体相同，而形参表中的类型则以实参表中的实<br>际类型为依据。<br><strong>简单点就是使用函数模板就可以很方便的计算相同过程但是函数类型不同的数据啦</strong><br><strong>虽然使用了函数模板，但是和重载函数编译出来的结果是相同的嗷，写法更简洁，编译出来的程序大小是相同的嗷</strong></p>
-<h2 id="2-程序实例"><a href="#2-程序实例" class="headerlink" title="2.程序实例"></a>2.程序实例</h2><p><strong>编写一个程序，其功能是查找一维数组a中第一个值为x的元素的下标如果不存在该元素则返回-1。</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ </span><br><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">template &lt;typename Type&gt; int FindElement(Type a[], Type x, int n) </span><br><span class="line">// 定义函数模板，函数类型暂定为Type，将随着传入的参数的不同进行修改</span><br><span class="line">&#123;</span><br><span class="line"> <span class="keyword">for</span>(int i=0; i&lt;n; i++) //此处是一个循环，用于调出数组内的所有数进行比对</span><br><span class="line"> <span class="keyword">if</span>(a[i]==x) <span class="built_in">return</span> i ;</span><br><span class="line"> <span class="built_in">return</span> -1;</span><br><span class="line">&#125;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line"> int a[6]=&#123;1, 3, -2, -9, 2,100&#125;;</span><br><span class="line"> double b[6]=&#123;30, 75.8, 68.3, 76.5, 93.5, 26.7&#125;;</span><br><span class="line"> char c[10]=&#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;;&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;0&#x27;</span>&#125;;</span><br><span class="line"> cout&lt;&lt;<span class="string">&quot;100在数组a中的下标为：&quot;</span>&lt;&lt;<span class="string">FindElement (a, 100, 6)&lt;&lt;endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;76.6在数组b中的下标为：&quot;</span></span><br><span class="line"><span class="string"> &lt;&lt; FindElement</span> (b, 76.6, 6)&lt;&lt;<span class="string">endl;</span></span><br><span class="line"><span class="string"> cout&lt;&lt;&quot;k在数组c中的下标为：&quot;&lt;&lt;FindElement (c, &#x27;k&#x27;, 10)&lt;&lt;endl</span>;</span><br><span class="line"> <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>课暂时还只上了一丢丢，学完一课一更新吧，嘿嘿</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://leonlee233.github.io/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/" data-id="clo6q30bh0003z8ukc8e1h1gv" data-title="c++函数模板01" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://leonlee233.github.io/2020/04/09/c-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF01/" data-id="clo6rjqhv0000lcukgm9o22cw" data-title="c++函数模板01" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -221,59 +143,15 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其实早就对github有所耳闻（据说是全球最大的同性交友网站？&#x2F;手动狗头），每每听大佬们说在上面找到各种答案爬虫，秒刷网课啥的，还是挺羡（柠）慕（檬）的。<br>因为疫情在家也挺无聊的，因此萌生了建立个人网站的念头，发现云服务器挺贵，域名每年还要续费（留下了贫穷的眼泪），刚好买了过气的树莓派，在csdn上学习树莓派的时候·找到了署博客的方法（嘿嘿）。<br>第一次使用折腾了一个晚上，总结了一些经验的说，就打算写一条新的博客（这个家伙主要是怕他自己忘了怎么重来），部署到github（顺便看一手老罗的相声）。</p>
 <p><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQI7rt"><img src="https://s1.ax1x.com/2020/04/20/JQI7rt.th.jpg" alt="JQI7rt.th.jpg"></a></p>
-<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="安装hexo之前所需要做的准备"><a href="#安装hexo之前所需要做的准备" class="headerlink" title="安装hexo之前所需要做的准备"></a>安装hexo之前所需要做的准备</h3><p>node.js和git（有的教程也没用到git，到现在我也还不知道git的作用，（大概可能过会儿我就知道惹））<br>node.js可以在<a target="_blank" rel="noopener" href="http://www.nodejs.org/">www.nodejs.org</a> 上下载，mac os和win可以直接下载，建议下载LTS版本（长支持版），会更加稳定。*1</p>
-<p>下载完成直接可以一路确认安装下去嗷。<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQIqVf"><img src="https://s1.ax1x.com/2020/04/20/JQIqVf.th.jpg" alt="JQIqVf.th.jpg"></a></p>
-<p>安装完成后win可以在cmd中输入一下代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v          <span class="comment">#查看nodejs版本</span></span><br></pre></td></tr></table></figure>
-
-<p>我是分割线—</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v           <span class="comment">#查看npm版本</span></span><br></pre></td></tr></table></figure>
-
-<p>如果有需要可以选择安装cnpm（据说速度更快丢包率低）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org       <span class="comment">#安装淘宝源的cnpm</span></span><br></pre></td></tr></table></figure>
-
-<p>我是分割线—</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm -v         <span class="comment">#查看cnpm版本</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="正式开始安装hexo啦"><a href="#正式开始安装hexo啦" class="headerlink" title="正式开始安装hexo啦"></a>正式开始安装hexo啦</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli  <span class="comment">#开始安装hexo</span></span><br></pre></td></tr></table></figure>
-
-<p>安装了淘宝源的请使用下面的连接（后面的操作都没区别了）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install -g hexo-cli  <span class="comment">#开始安装hexo</span></span><br></pre></td></tr></table></figure>
-
-<p>次处安装失败了可以重复使用命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v                  <span class="comment">#查看hexo的版本</span></span><br></pre></td></tr></table></figure>
-
-<p>有显示的话就说明安装成功了<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQI6Dx"><img src="https://s1.ax1x.com/2020/04/20/JQI6Dx.th.jpg" alt="JQI6Dx.th.jpg"></a></p>
-<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="正式开始使用hexo创建个人博客"><a href="#正式开始使用hexo创建个人博客" class="headerlink" title="正式开始使用hexo创建个人博客"></a>正式开始使用hexo创建个人博客</h3><p>现在开始创建本地文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> bolg        <span class="comment">#创建名字为blog的文件夹</span></span><br></pre></td></tr></table></figure>
-
-<p>使用cd命令切换文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog           <span class="comment">#切换到blog文件夹</span></span><br></pre></td></tr></table></figure>
-
-<p>生成博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init          <span class="comment">#生成初始博客</span></span><br></pre></td></tr></table></figure>
-
-<p>启动本地博客服务（测试用）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s               <span class="comment">#启动本地博客服务</span></span><br></pre></td></tr></table></figure>
-
-<p>创建新的博客标题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 文章标题             <span class="comment">#创建新的博客</span></span><br></pre></td></tr></table></figure>
-
-<p>之后会在blog&#x2F;source&#x2F;中创建markdown文档可以修改文章内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s               <span class="comment">#启动本地博客服务</span></span><br></pre></td></tr></table></figure>
-
-<p>接下来就可以在浏览器中输入本地服务端口网址测试自己的静态博客啦<br>预览成功后就可以进入下一步啦</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQopMn"><img src="https://s1.ax1x.com/2020/04/20/JQopMn.th.jpg" alt="JQopMn.th.jpg"></a></p>
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="将博客推到远端github或者gitee"><a href="#将博客推到远端github或者gitee" class="headerlink" title="将博客推到远端github或者gitee"></a>将博客推到远端github或者gitee</h3><p>在浏览器中打开github或者gitee的官网进行注册，这里以github为例（其实gitee速度更快些）</p>
-<h2 id="最终章"><a href="#最终章" class="headerlink" title="最终章"></a>最终章</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>今天晚上偶然发现bilibili上的一个up讲的超级好！！！也包含了主题的替换，如果大家有时间可以去看看,本章到此结束（这货实在是太懒了，晚上忙着打游戏去了，我都看不下去了）<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/JQI48H"><img src="https://s1.ax1x.com/2020/04/20/JQI48H.th.jpg" alt="JQI48H.th.jpg"></a></p>
-<p>up:<a target="_blank" rel="noopener" href="https://b23.tv/BV1Yb411a7ty">codesheep</a><br>2020-4-2 19：46：23</p>
-<hr>
-<h3 id="文章的最后"><a href="#文章的最后" class="headerlink" title="文章的最后"></a>文章的最后</h3><p>*1：本次文章没有图文（昨晚弄了一晚上也还没学会，害，下次加上）。<br>*2：罗老师的直播挺拖沓的，现在时间对现在的年龄段的罗友们的极为宝贵，罗老师对一般的路人吸引力也不够，希望老罗可以学习一下吧，流量和热度这样拖下去，估计也没什么人看。<br>*3：markdown的排版啥的我还没学会，可能文章的排版有些问题，大家多多谅解（虽然也没什么人看）</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://leonlee233.github.io/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" data-id="clo6q30cw000xz8ukab6uc42e" data-title="第一次博客" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://leonlee233.github.io/2020/04/02/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" data-id="clo6rjqif000qlcukdlmj4nrh" data-title="第一次博客" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -305,7 +183,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hide/" rel="tag">Hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" rel="tag">回忆录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E5%9B%BE/" rel="tag">美图</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hide/" rel="tag">Hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" rel="tag">回忆录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%87%E6%80%AA%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">奇怪的碎碎念</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BE%8E%E5%9B%BE/" rel="tag">美图</a></li></ul>
     </div>
   </div>
 
@@ -315,7 +193,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 12px;">回忆录</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 18px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 16px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 12px;">游记</a> <a href="/tags/%E7%BE%8E%E5%9B%BE/" style="font-size: 10px;">美图</a>
+      <a href="/tags/Hide/" style="font-size: 20px;">Hide</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 12px;">回忆录</a> <a href="/tags/%E5%A5%87%E6%80%AA%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 10px;">奇怪的碎碎念</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 18px;">学习心得</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">学习笔记</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px;">摄影</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 16px;">教程</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 12px;">游记</a> <a href="/tags/%E7%BE%8E%E5%9B%BE/" style="font-size: 10px;">美图</a>
     </div>
   </div>
 
@@ -324,7 +202,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
     </div>
   </div>
 
@@ -335,10 +213,6 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2023/10/26/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/2023/07/14/%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E5%BC%80%E5%A7%8B/">一个好的开始</a>
@@ -354,6 +228,10 @@
         
           <li>
             <a href="/2021/06/05/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Linux学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/04/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/">好久不见</a>
           </li>
         
       </ul>
@@ -378,9 +256,9 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">主页</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">归档</a>
   
 </nav>
     
