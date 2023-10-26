@@ -478,7 +478,7 @@ body {
   font: 13px ForkAwesome;
   border: none;
   background: none;
-  color: #bbb;
+  color: #fff;
   cursor: pointer;
 }
 .search-form-submit:hover,
