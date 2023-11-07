@@ -4,17 +4,13 @@
   <meta charset="utf-8">
   
   
-  <title>Linux学习笔记 | Leon&#39;s blog</title>
+  <title>Archiv: 2023/11 | Leon&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="前言一直想找个机会把学习的内容做个总结，下次忘记复习的时候就会舒服很多，遗憾的是直到最近我才把blog这个优秀的学习工具记起来，属实惭愧，路漫漫其修远兮">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux学习笔记">
-<meta property="og:url" content="https://leonlee233.github.io/2021/06/05/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Leon&#39;s blog">
+<meta property="og:url" content="https://leonlee233.github.io/archives/2023/11/index.html">
 <meta property="og:site_name" content="Leon&#39;s blog">
-<meta property="og:description" content="前言一直想找个机会把学习的内容做个总结，下次忘记复习的时候就会舒服很多，遗憾的是直到最近我才把blog这个优秀的学习工具记起来，属实惭愧，路漫漫其修远兮">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-06-05T07:27:50.000Z">
-<meta property="article:modified_time" content="2023-10-26T05:45:25.411Z">
 <meta property="article:author" content="Leon Lee">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@https:&#x2F;&#x2F;twitter.com&#x2F;leonwithleo">
@@ -78,103 +74,58 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Linux学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/05/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2021-06-05T07:27:50.000Z" itemprop="datePublished">2021-06-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      Linux学习笔记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2023/11/06/Deformable-DETR%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91/" class="archive-article-date">
+  <time class="dt-published" datetime="2023-11-06T14:20:19.000Z" itemprop="datePublished">Nov 6</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2023/11/06/Deformable-DETR%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91/">Deformable-DETR中文翻译</a>
     </h1>
   
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直想找个机会把学习的内容做个总结，下次忘记复习的时候就会舒服很多，遗憾的是直到最近我才把blog这个优秀的学习工具记起来，属实惭愧，路漫漫其修远兮</p>
-<span id="more"></span>
-<h3 id="第一章linux的常用命令和文件操作"><a href="#第一章linux的常用命令和文件操作" class="headerlink" title="第一章linux的常用命令和文件操作"></a>第一章linux的常用命令和文件操作</h3><h4 id="1-1linux命令行界面"><a href="#1-1linux命令行界面" class="headerlink" title="1.1linux命令行界面"></a>1.1linux命令行界面</h4><p>linux默认使用的是bash，shell命令可以完成诸如文件操作，内存控制等功能，可以快捷的完成任务</p>
-<h4 id="1-2-常见的shell命令"><a href="#1-2-常见的shell命令" class="headerlink" title="1.2 常见的shell命令"></a>1.2 常见的shell命令</h4><p><strong>who命令</strong></p>
-<p>who能列出所有正在使用系统的用户，所用终端名和注册系统的时间等 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">who</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>echo命令</strong></p>
-<p>echo命令可以将命令行中的参数输出到标准输出（例如屏幕上）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> This is a command.and i am cool</span><br></pre></td></tr></table></figure>
-
-<p><strong>date命令</strong></p>
-<p>date命令用于输出计算机中的系统日期和时间并且将他们输出在屏幕上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">date</span> </span><br></pre></td></tr></table></figure>
-
-<p><strong>cal命令</strong></p>
-<p>cal命令可以显示公元1-9999年中任意一年或者任意一个月的日历，有两种用法<br>1.cal 年份</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> cal 1999</span><br></pre></td></tr></table></figure>
-<p>2.cal 月份 年份</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> cal 10 1999</span><br></pre></td></tr></table></figure>
-
-<p><strong>clear命令</strong></p>
-<p>clear命令可以清空屏幕上显示的信息，类似于DOS中的CLS命令，清除屏幕之后提示符将会移动到屏幕的最上方</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> clear</span><br></pre></td></tr></table></figure>
-
-<p><strong>ls命令</strong></p>
-<p>ls 目录的绝对地址<br>显示绝对地址的目录包含的内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ls</span> /home/mengqc/dir</span><br></pre></td></tr></table></figure>
-<p>屏幕上将会列出目录&#x2F;home&#x2F;mengqc&#x2F;dir 中包含的的文件和子目录的信息</p>
-<p><strong>pwd命令</strong></p>
-<p>pwd将会显示bash所在的当前目录地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>su命令</strong></p>
-<p>su 用户名<br>su命令可以更改用户身份，如从普通用户更换成为root用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ su root</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-3命令的一般形式"><a href="#1-3命令的一般形式" class="headerlink" title="1.3命令的一般形式"></a>1.3命令的一般形式</h4><p><strong>1）who命令</strong></p>
-<p>who [选项] [参数]</p>
-<p><strong>2）实例</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">who</span> -b</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-4文件及文件类型"><a href="#1-4文件及文件类型" class="headerlink" title="1.4文件及文件类型"></a>1.4文件及文件类型</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://leonlee233.github.io/2021/06/05/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="clonvu4rw000agwukfkw9ckjb" data-title="Linux学习笔记" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-    </footer>
+    </header>
   </div>
+</article>
   
     
-<nav id="article-nav">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2023/11/02/pytorch-%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86/" class="archive-article-date">
+  <time class="dt-published" datetime="2023-11-02T00:51:49.000Z" itemprop="datePublished">Nov 2</time>
+</a>
+      
   
-    <a href="/2021/11/20/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80step1-hadoop/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          大数据基础step1:hadoop
-        
-      </div>
-    </a>
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2023/11/02/pytorch-%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86/">pytorch-加载数据集</a>
+    </h1>
   
-  
-    <a href="/2021/06/04/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">好久不见</div>
-    </a>
-  
-</nav>
 
-  
+    </header>
+  </div>
 </article>
+  
+  
+    </div></section>
+  
 
 
 </section>
