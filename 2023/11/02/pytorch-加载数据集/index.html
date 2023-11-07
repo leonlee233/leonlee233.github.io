@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://leonlee233.github.io/download.png">
 <meta property="og:image" content="https://leonlee233.github.io/image.png">
 <meta property="article:published_time" content="2023-11-02T00:51:49.000Z">
-<meta property="article:modified_time" content="2023-11-02T01:37:07.441Z">
+<meta property="article:modified_time" content="2023-11-07T05:22:43.111Z">
 <meta property="article:author" content="Leon Lee">
 <meta property="article:tag" content="Code Practice">
 <meta name="twitter:card" content="summary">
@@ -110,6 +110,8 @@
 <p>1.定义数据集内的图片加载方式，裁切旋转等</p>
 <p>2.定义Dataset，里有包括数据集的文件地址，数据集的一些增强功能，如果需要按照自己的要求来自定义数据集的处理方式，可以继承Dataset抽象类，实现__len__,_ <em>getitem</em>_,这两种方法即可</p>
 <p>3.定义dataloader，他会把dataset转换为能让pytorch处理的数据类型，进行数据集的训练和验证</p>
+<span id="more"></span>
+
 <h2 id="Task-1：加载没有图片及Ccsv文件的文件夹分类的数据集"><a href="#Task-1：加载没有图片及Ccsv文件的文件夹分类的数据集" class="headerlink" title="Task 1：加载没有图片及Ccsv文件的文件夹分类的数据集"></a>Task 1：加载没有图片及Ccsv文件的文件夹分类的数据集</h2><p>当我们遇到一个数据集，里头的各类数据是用各个名称不同的文件夹组成的<br><img src="/download.png" alt="Alt text"><br>这个时候我们可以使用dataset里头的ImageFolder方法来创建Dataset<br>假定数据集文件在当前任务的&#x2F;data&#x2F;目录下，我们按照如下顺序来创建Dataset和dataloader</p>
 <p>0.导包:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> DataLoader,Dataset</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> transforms, utils,datasets</span><br></pre></td></tr></table></figure>
@@ -145,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://leonlee233.github.io/2023/11/02/pytorch-%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86/" data-id="clonvu4rw000bgwukba2uhxbt" data-title="pytorch-加载数据集" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://leonlee233.github.io/2023/11/02/pytorch-%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86/" data-id="clonvxnyb000lj8ukak6beicb" data-title="pytorch-加载数据集" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
